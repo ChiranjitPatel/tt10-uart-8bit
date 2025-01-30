@@ -1,52 +1,55 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  title:        "8 bit UART"      # Project title
+  author:       "Vivek Chiranjit"      # Your name
+  discord:      "cj_pat"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "This is a 8-bit UART communication block"      # One line description of what your project does
+  language:     "SystemVerilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     50000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_uart_8bit"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "project.v"
+    - "tt_um_uart_8bit.sv"
+    - "uart_rx_tx.sv"
+    - "uart_rx.sv"
+    - "uart_tx.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "uart_transmit_data input bit0"
+  ui[1]: "uart_transmit_data input bit1"
+  ui[2]: "uart_transmit_data input bit2"
+  ui[3]: "uart_transmit_data input bit3"
+  ui[4]: "uart_transmit_data input bit4"
+  ui[5]: "uart_transmit_data input bit5"
+  ui[6]: "uart_transmit_data input bit6"
+  ui[7]: "uart_transmit_data input bit7"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "uart_received_data output bit0"
+  uo[1]: "uart_received_data output bit1"
+  uo[2]: "uart_received_data output bit2"
+  uo[3]: "uart_received_data output bit3"
+  uo[4]: "uart_received_data output bit4"
+  uo[5]: "uart_received_data output bit5"
+  uo[6]: "uart_received_data output bit6"
+  uo[7]: "uart_received_data output bit7"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
+  uio[0]: "uart_rx_d_in"
+  uio[1]: "uart_tx_start"
+  uio[2]: "uart_tx_d_out"
+  uio[3]: "uart_rx_valid"
+  uio[4]: "uart_tx_ready"
   uio[5]: ""
   uio[6]: ""
   uio[7]: ""
