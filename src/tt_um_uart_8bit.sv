@@ -37,14 +37,11 @@ module tt_um_uart_8bit #(
 	);
 	
   // All output pins must be assigned. If not used, assign to 0.
-  // assign ui_in[7:3] = 0;
-  // assign uo_out[7:4] = 0;
-  assign uio_in[7:2] = 0;
   assign uio_out[1:0] = 0;
   assign uio_out[7:5] = 0;
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, 1'b0};
+  wire _unused = &{ena, uio_in[7:2], 1'b0};
 
 endmodule
