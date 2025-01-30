@@ -15,7 +15,7 @@
 //-----------------------------------------------------------------------------------------------------------------------------------------------------			
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-`timescale 1ns / 1ps
+// `timescale 1ns / 1ps
 
 module uart_tx 
 	# (	parameter [23:0] baud_rate = 24'd2000000,
@@ -47,8 +47,8 @@ module uart_tx
 //-----------------------------------------------------------------------------------------------------------------------------------------------------	
 
 	always_comb begin
-		uart_tx_ready <= transmit_complete & tx_reg_ready;
-		uart_d_out	<=	data_shift_reg[0];
+		uart_tx_ready = transmit_complete & tx_reg_ready;
+		uart_d_out	=	data_shift_reg[0];
 	end
 	
 	always_ff @(posedge uart_clock, negedge uart_reset) begin
@@ -105,7 +105,7 @@ module uart_tx
 										bit_count <= 4'b0;
 									end
 									else 
-										state = Shift_Data;
+										state <= Shift_Data;
 								end
 								
 				default		:	state <= Init;
