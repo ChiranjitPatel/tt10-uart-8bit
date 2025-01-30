@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "8 bit UART"      # Project title
+  title:        "8-bit UART"      # Project title
   author:       "Vivek Chiranjit"      # Your name
   discord:      "cj_pat"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "This is a 8-bit UART communication block"      # One line description of what your project does
