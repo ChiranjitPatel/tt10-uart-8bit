@@ -6,11 +6,10 @@ module uart_rx_tx
 	)
 	(	clk_int,
 		uart_reset,
-		// uart_transmit_data,
 		uart_rx_d_in,
 		uart_tx_start,
+		loopback,
 		uart_tx_d_out,
-		// uart_received_data,
 		uart_rx_valid,
 		uart_tx_ready
 	);
@@ -18,13 +17,15 @@ module uart_rx_tx
 	
 	input  logic clk_int;
 	input  logic uart_reset;
-	logic   [7:0] uart_transmit_data;
 	input  logic uart_rx_d_in;
 	input  logic uart_tx_start;
+	input  logic loopback;
 	output logic uart_tx_d_out;
-	logic  [7:0] uart_received_data;
 	output logic uart_rx_valid;
 	output logic uart_tx_ready;
+	
+	logic  [7:0] uart_transmit_data;
+	logic  [7:0] uart_received_data;
 	
 	// Instantiate uart_tx
 	uart_tx 
@@ -55,17 +56,10 @@ module uart_rx_tx
 		.uart_valid(uart_rx_valid)
 	);
 
-
-	// integer i;
-	// always_comb begin
-		// for (i = 0; i < 8; i++) begin
-			// @(posedge clk_int); 
-				// uart_received_data = {uart_received_data[6:0], uart_rx_d_in}; // Shift in new bit
-		// end
-	// end
-	
 	always_comb begin	
-		uart_transmit_data = uart_received_data;
+		if (loopback ==1)
+			uart_transmit_data = uart_received_data;
+		 
 	end
 	
 endmodule

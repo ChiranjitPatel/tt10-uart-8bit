@@ -39,7 +39,7 @@ module uart_rx_tx_tb;
     end
 
     // UART loopback
-    assign uart_rx_d_in = uart_tx_d_out; // Loop back tx_d_out to rx_d_in
+    // assign uart_rx_d_in = uart_tx_d_out; // Loop back tx_d_out to rx_d_in
 
     // Monitor received data
     // always @(posedge clk_int) begin

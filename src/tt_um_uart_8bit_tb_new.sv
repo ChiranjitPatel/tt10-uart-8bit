@@ -47,7 +47,7 @@ module tb_tt_um_uart_8bit;
 
     initial begin
         // Initialize signals
-        ui_in = 8'b0;
+        ui_in = 8'b00000100;
         uio_in = 8'b0;
         test_data = 10'b1101001010; // Example test data
 

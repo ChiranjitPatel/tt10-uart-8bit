@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Feb  1 15:06:22 2025
+# Process ID: 19572
+# Current directory: D:/Github/tt10-uart-8bit/vivado/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3728 D:\Github\tt10-uart-8bit\vivado\project_1\project_1.xpr
+# Log file: D:/Github/tt10-uart-8bit/vivado/project_1/vivado.log
+# Journal file: D:/Github/tt10-uart-8bit/vivado/project_1\vivado.jou
+# Running On        :GHOST
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :17041 MB
+# Swap memory       :1073 MB
+# Total Virtual     :18114 MB
+# Available Virtual :7460 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Github/tt10-uart-8bit/vivado/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Github/tt10-uart-8bit/vivado/project_1/tb_tt_um_uart_8bit_behav.wcfg
+source tb_tt_um_uart_8bit.tcl
+restart
+run 5 us
+run 5 us
+close_sim
+launch_simulation
+open_wave_config D:/Github/tt10-uart-8bit/vivado/project_1/tb_tt_um_uart_8bit_behav.wcfg
+source tb_tt_um_uart_8bit.tcl
+restart
+run 5 us
+run 5 us
+current_wave_config {tb_tt_um_uart_8bit_behav.wcfg}
+add_wave {{/tb_tt_um_uart_8bit/uut/uart_module}} 
+restart
+run 5 us
+run 5 us
+close_sim
+launch_simulation
+open_wave_config D:/Github/tt10-uart-8bit/vivado/project_1/tb_tt_um_uart_8bit_behav.wcfg
+source tb_tt_um_uart_8bit.tcl
+restart
+run 5 us
+current_wave_config {tb_tt_um_uart_8bit_behav.wcfg}
+add_wave {{/tb_tt_um_uart_8bit/uut/uart_module}} 
+current_wave_config {tb_tt_um_uart_8bit_behav.wcfg}
+add_wave {{/tb_tt_um_uart_8bit/uut/uart_module/uart_tx_inst}} 
+restart
+run 5 us
+save_wave_config {D:/Github/tt10-uart-8bit/vivado/project_1/tb_tt_um_uart_8bit_behav.wcfg}
+close_sim

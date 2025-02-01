@@ -28,22 +28,20 @@
 	uart_module (	
 		.clk_int(clk),
 		.uart_reset(rst_n),
-		// .uart_transmit_data(uart_rx_d_in),
 		.uart_rx_d_in(ui_in[0]),
 		.uart_tx_start(ui_in[1]),
+		.loopback(ui_in[2]),
 		.uart_tx_d_out(uo_out[0]),
-		// .uart_received_data(uart_tx_start),
 		.uart_rx_valid(uo_out[1]),
 		.uart_tx_ready(uo_out[2])
 	);
 	
   // All output pins must be assigned. If not used, assign to 0.
   assign uo_out[7:3] = 0;
-  assign uio_out[1:0] = 0;
-  assign uio_out[7:5] = 0;
+  assign uio_out[7:0] = 0;
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, uio_in[7:2], 1'b0};
+  wire _unused = &{ena, uio_in[7:0], 1'b0};
 
 endmodule

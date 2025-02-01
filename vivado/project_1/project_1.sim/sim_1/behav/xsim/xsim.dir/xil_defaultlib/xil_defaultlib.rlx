@@ -2,10 +2,10 @@
 2020.2
 May 22 2024
 19:03:11
-D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit.v,1738346302,verilog,,,,tt_um_uart_8bit,,uvm,,,,,,
-D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit_tb_new.sv,1738346147,systemVerilog,,,,tb_tt_um_uart_8bit,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit.v,1738405181,verilog,,,,tt_um_uart_8bit,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit_tb_new.sv,1738428490,systemVerilog,,,,tb_tt_um_uart_8bit,,uvm,,,,,,
 D:/Github/tt10-uart-8bit/src/uart_rx.sv,1738345371,systemVerilog,,D:/Github/tt10-uart-8bit/src/uart_rx_tx.sv,,uart_rx,,uvm,,,,,,
-D:/Github/tt10-uart-8bit/src/uart_rx_tx.sv,1738342290,systemVerilog,,D:/Github/tt10-uart-8bit/src/uart_tx.sv,,uart_rx_tx,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/uart_rx_tx.sv,1738404983,systemVerilog,,D:/Github/tt10-uart-8bit/src/uart_tx.sv,,uart_rx_tx,,uvm,,,,,,
 D:/Github/tt10-uart-8bit/src/uart_rx_tx_tb.sv,1738343708,systemVerilog,,,,uart_rx_tx_tb,,uvm,,,,,,
 D:/Github/tt10-uart-8bit/src/uart_tx.sv,1738345373,systemVerilog,,D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit_tb_new.sv,,uart_tx,,uvm,,,,,,
 D:/Github/tt10-uart-8bit/vivado/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,uvm,,,,,,
