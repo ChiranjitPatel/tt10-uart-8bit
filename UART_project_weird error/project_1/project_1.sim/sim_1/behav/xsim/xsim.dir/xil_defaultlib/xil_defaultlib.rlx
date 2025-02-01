@@ -1,0 +1,12 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+D:/Github/tt10-uart-8bit/UART_project/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit.sv,1738339592,systemVerilog,,D:/Github/tt10-uart-8bit/src/uart_rx.sv,,tt_um_uart_8bit,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit_tb_new.sv,1738337659,systemVerilog,,,,tb_tt_um_uart_8bit,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/uart_rx.sv,1738339548,systemVerilog,,D:/Github/tt10-uart-8bit/src/uart_rx_tx.sv,,uart_rx,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/uart_rx_tb.sv,1737734586,systemVerilog,,,,uart_rx_tb,,uvm,,,,,,
+D:/Github/tt10-uart-8bit/src/uart_rx_tx.sv,1738340553,systemVerilog,,D:/Github/tt10-uart-8bit/src/uart_tx.sv,,uart_rx_tx,,uvm,,,,,,
+,,,,,,,,,,,,,,
+D:/Github/tt10-uart-8bit/src/uart_tx.sv,1738252334,systemVerilog,,D:/Github/tt10-uart-8bit/src/tt_um_uart_8bit_tb_new.sv,,uart_tx,,uvm,,,,,,

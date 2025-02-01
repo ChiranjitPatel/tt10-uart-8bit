@@ -2,11 +2,12 @@
  * Copyright (c) 2024 Your Name
  * SPDX-License-Identifier: Apache-2.0
  */
+`timescale 1ns / 1ps
 
-`default_nettype none
+// `default_nettype none
 
-module tt_um_uart_8bit #(  
-		parameter [23:0] BAUD_RATE = 24'd9600,
+ module tt_um_uart_8bit #(  
+		parameter [23:0] BAUD_RATE = 24'd4000000,
 		parameter [27:0] CLOCK_FREQ = 28'd100000000
 	)
 	(
@@ -23,20 +24,21 @@ module tt_um_uart_8bit #(
   uart_rx_tx #(
         .BAUD_RATE(BAUD_RATE),
         .CLOCK_FREQ(CLOCK_FREQ)
-    ) uart_module (	
-		.clk_10ns(clk),
-		// .uart_clock(clk),
+    ) 
+	uart_module (	
+		.clk_int(clk),
 		.uart_reset(rst_n),
-		.uart_transmit_data(ui_in[7:0]),
-		.uart_rx_d_in(uio_in[0]),
-		.uart_tx_start(uio_in[1]),
-		.uart_tx_d_out(uio_out[2]),
-		.uart_received_data(uo_out[7:0]),
-		.uart_rx_valid(uio_out[3]),
-		.uart_tx_ready(uio_out[4])
+		// .uart_transmit_data(uart_rx_d_in),
+		.uart_rx_d_in(ui_in[0]),
+		.uart_tx_start(ui_in[1]),
+		.uart_tx_d_out(uo_out[0]),
+		// .uart_received_data(uart_tx_start),
+		.uart_rx_valid(uo_out[1]),
+		.uart_tx_ready(uo_out[2])
 	);
 	
   // All output pins must be assigned. If not used, assign to 0.
+  assign uo_out[7:3] = 0;
   assign uio_out[1:0] = 0;
   assign uio_out[7:5] = 0;
   assign uio_oe  = 0;

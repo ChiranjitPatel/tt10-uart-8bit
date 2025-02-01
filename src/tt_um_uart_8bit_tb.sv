@@ -35,7 +35,7 @@ module tb_tt_um_uart_8bit;
 
     // Generate clock signal
     initial begin
-        clk_10ns = 0;
+        clk = 0;
         forever #(CLK_PERIOD / 2) clk = ~clk; // Generate clock
     end
 	
@@ -43,7 +43,7 @@ module tb_tt_um_uart_8bit;
     assign uio_in[0] = uio_in[2]; // Loop back tx_d_out to rx_d_in
 
     // Monitor received data
-    always @(posedge clk_10ns) begin
+    always @(posedge clk) begin
         if (uio_out[0]) begin
             $display("Received data: %h (%s)", uo_out, uo_out);
         end
