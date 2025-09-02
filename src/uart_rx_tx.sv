@@ -56,7 +56,7 @@ module uart_rx_tx
 		.uart_valid(uart_rx_valid)
 	);
 
-	always_comb begin	
+	always_latch begin	
 		if (loopback ==1)
 			uart_transmit_data = uart_received_data;
 		 
